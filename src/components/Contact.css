@@ -3,7 +3,7 @@
 #contact-page {
     width: 100%;
     min-height: 100vh;
-    color: rgb(182, 159, 159);
+    color: rgb(197, 188, 188);
     padding: 5rem 3rem 0 0;
     display: flex;
     align-items: flex-start;
@@ -76,6 +76,26 @@
 }
 
 
+#contact-page .error-text, .error-text-message {
+    background-color: #4f5054;
+    box-sizing: border-box;
+    width: 220px;
+    font-size: 1rem;
+    position: absolute;
+    color: rgba(255, 0, 0, 0.699);
+    margin: 0.5rem 0;
+    padding: 1rem;
+    border-radius: 10px;
+    margin-top: 8rem;
+}
+
+
+#contact-page  .error-text-message {
+    margin-top: 24rem;
+    width: 450px;
+}
+
+
 #contact-page .contact-button {
     bottom: 10rem;
     border: 3px solid rgb(42, 118, 39);
@@ -92,8 +112,14 @@
 }
 
 
+#contact-page .message-ok {
+    color: green;
+    width: 300px;
+}
+
+
 #contact-page .leaflet-container {
-    width: 50%;
+    width: 800px;
     height: 80%;
     animation: animated-form .3s ease-out;
 }

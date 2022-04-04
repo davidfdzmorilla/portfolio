@@ -7,9 +7,11 @@ export default function About() {
         <article id='about-page'>
             <article className='content'>
             <h2>Este soy yo</h2>
-                <div><span>p</span><p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour.</p><span>p</span></div>
+                <div><span>p</span><p>Aunque siempre me fascinó el mundo de la programación, y el desarrollo, mi vida laboral siempre estuvo ligada  al sector Marítimo-Pesquero, llegando a ser mando intermedio.
+En estos momentos me encuentro aprovechando la oportunidad de fusionar una pasión con una carrera laboral. Creo que es muy importante disfrutar con tu trabajo y conmigo, el desarrollo ,lo consigue día a día.
+Me considero una persona creativa, con una fuerte orientación al logro y sobre todo comprometido a seguir aprendiendo para poder resolver proyectos cada vez más complejos.</p><span>p</span></div>
             </article>
-            <section>
+            <section className="avatar-container">
                 <div className="face-me" />
             <article className="hobbies-container">
                 <div className="tocadiscos-image"/>

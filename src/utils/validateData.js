@@ -11,7 +11,7 @@ export function validateData({ name, email, message }) {
             errorData = { errorTypeValidation: 'email', errorTextValidation: 'Email es requerido.'}
             return errorData
         case !message:
-            errorData = { errorTypeValidation: 'message', errorTextValidation: 'Mensage es requerido.'}
+            errorData = { errorTypeValidation: 'message', errorTextValidation: 'Mensaje es requerido.'}
             return errorData
         case name &&
             (name.length < 2 || name.length > 20 || !nameRegex.test(name)):
@@ -22,7 +22,7 @@ export function validateData({ name, email, message }) {
             errorData = { errorTypeValidation: 'email', errorTextValidation: 'Email no válido.'}
             return errorData
         case message && (message.length < 10 || message.length >= 200):
-            errorData = { errorTypeValidation: 'message', errorTextValidation: 'Tu debe debe contener entre 10 y 200 caracteres.'}
+            errorData = { errorTypeValidation: 'message', errorTextValidation: 'Tu mensaje debe contener entre 10 y 200 caracteres.'}
             return errorData
         default:
             return false

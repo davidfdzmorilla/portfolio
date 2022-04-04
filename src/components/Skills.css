@@ -5,7 +5,7 @@
 #skills-page {
     width: 100%;
     min-height: 100vh;
-    color: rgb(182, 159, 159);
+    color: rgb(197, 188, 188);
     padding: 2rem 3rem 0 2rem;
     display: flex;
     flex-wrap: wrap;
@@ -22,24 +22,41 @@
 }
 
 
+#skills-page .skills-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+
 #skills-page .soft-skills {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     height: 500px;
-    width: 50%;
-    padding-left: 1rem;
+    width: 45%;
+    padding: 1rem;
+    border-radius: 15px;
+    background-color: #36373a;
+    box-shadow: 10px 10px 10px;
 }
 
 
 #skills-page .soft-skills h3 {
     width: 100%;
     font-size: 1.3rem;
+    text-align: center;
 }
 
 #skills-page .soft-skills p {
-    padding-left: 1rem;
-    width: 50%;
+    width: 200px;
+    font-style: italic;
+}
+
+
+#skills-page .soft-skills p::before {
+    content: '🟢';
 }
 
 
@@ -47,9 +64,18 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 50%;
+    width: 45%;
     gap: 4rem;
-    height: min-content;
+    height: 500px;
+    padding: 1rem 3rem 3rem;
+    border-radius: 15px;
+    background-color: #36373a;
+    box-shadow: 10px 10px 10px;
+}
+
+
+#skills-page .tecnologies-container h3 {
+    text-align: center;
 }
 
 

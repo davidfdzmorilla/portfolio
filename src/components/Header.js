@@ -7,7 +7,7 @@ export default function Header({ scrollY }) {
         Efecto menu :(
     */
 
-    const colorDefault = 'rgb(182, 159, 159)'
+    const colorDefault = 'rgb(197, 188, 188)'
     let colorAbout
     scrollY + 100 >= document.getElementById('about-page')?.offsetTop && scrollY <= (document.getElementById('about-page')?.offsetTop) + (document.getElementById('about-page')?.offsetHeight - 100 ) ? colorAbout = 'green' : colorAbout = colorDefault
     let colorSkills
