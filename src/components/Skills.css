@@ -1,0 +1,151 @@
+:root {
+    --skill-bar-lenght: 0%;
+}
+
+#skills-page {
+    width: 100%;
+    min-height: 100vh;
+    color: rgb(182, 159, 159);
+    padding: 2rem 3rem 0 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+
+#skills-page  h2 {
+    font-size: 4rem;
+    width: 100%;
+    height: min-content;
+    align-self: center;
+}
+
+
+#skills-page .soft-skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 500px;
+    width: 50%;
+    padding-left: 1rem;
+}
+
+
+#skills-page .soft-skills h3 {
+    width: 100%;
+    font-size: 1.3rem;
+}
+
+#skills-page .soft-skills p {
+    padding-left: 1rem;
+    width: 50%;
+}
+
+
+#skills-page .tecnologies-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+    gap: 4rem;
+    height: min-content;
+}
+
+
+.skills__item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.skills__item p {
+    width: 10rem;
+}
+
+
+.skills__bar,
+.skills__bar::after {
+    position: relative;
+    width:  400px;
+    height: 8px;
+    background-color: #888;
+    border-radius: 10px;
+    animation: skills-bar-fill 2s ease-in-out forwards;
+    overflow: hidden;
+}
+
+
+.skills__bar::after {
+    content: '';
+    position: absolute;
+    left: -400px;
+}
+
+
+.blue::after {
+    background-color: rgb(100, 88, 230);
+}
+.red::after {
+    background-color: rgb(230, 93, 88);
+}
+.orange::after {
+    background-color: rgb(230, 171, 88);
+}
+.violet::after {
+    background-color: rgb(171, 88, 230);
+}
+.green::after {
+    background-color: rgb(131, 230, 88);
+}
+
+
+.skills__bar--10::after {
+    --skill-bar-lenght: 10%;
+}
+
+
+.skills__bar--20::after {
+    --skill-bar-lenght: 20%;
+}
+
+.skills__bar--30::after {
+    --skill-bar-lenght: 30%;
+}
+
+.skills__bar--40::after {
+    --skill-bar-lenght: 40%;
+}
+
+.skills__bar--50::after {
+    --skill-bar-lenght: 50%;
+}
+
+
+.skills__bar--60::after {
+    --skill-bar-lenght: 60%;
+}
+
+
+.skills__bar--70::after {
+    --skill-bar-lenght: 70%;
+}
+
+
+.skills__bar--80::after {
+    --skill-bar-lenght: 80%;
+}
+
+
+.skills__bar--90::after {
+    --skill-bar-lenght: 90%;
+}
+
+
+@keyframes skills-bar-fill {
+    to {
+        transform: translateX(var(--skill-bar-lenght))
+    }
+}
+

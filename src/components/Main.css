@@ -1,0 +1,42 @@
+main {
+    margin-left: 300px;
+    background-color: #28292C;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-left: 5rem;
+    flex-grow: 1;
+}
+
+main .buttons-scroll-conatiner {
+    position: fixed;
+    bottom: 2rem;
+    left: 20rem;
+    cursor: pointer;
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+/* main #boat-container {
+    border: 1px solid white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    margin-right: 0;
+}
+
+
+main #boat-container #boat {
+    background-image: url('../assets/png/barco-pirata.png');
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+    bottom: 2rem;
+}
+main #boat-container #cofre {
+    font-size: 2rem;
+} */
+

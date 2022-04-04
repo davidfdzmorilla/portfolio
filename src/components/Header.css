@@ -1,0 +1,80 @@
+header {
+    width: 300px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2rem;
+    background-color: #18181A;
+    position: fixed;
+}
+
+
+.menu-bar {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.menu-bar:first-child {
+    border-top: 3px solid rgb(42, 118, 39);
+}
+
+
+.menu-bar li {
+    border-bottom: 3px solid rgb(42, 118, 39);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    cursor: pointer;
+    padding: 1.2rem 0;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+.menu-bar li:hover {
+    background-color: #0d0d0e;
+    padding: 1.3rem 0;
+}
+
+
+.logos-rss-container {
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 2rem;
+    padding: 0 1rem 2rem 0;
+}
+
+.linkeding-logo {
+    background-image: url('../assets/png/LI-In-Bug.png');
+    width: 35px;
+    height: 35px;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.gitlab-logo {
+    background-image: url('../assets/png/gitlab-logo-white-stacked-rgb.png');
+    width: 40px;
+    height: 40px;
+    background-size: cover;
+    cursor: pointer;
+}
+
+
+.github-logo {
+    background-image: url('../assets/png/GitHub-Mark-120px-plus.png');
+    width: 35px;
+    height: 35px;
+    background-size: cover;
+    background-color: azure;
+    cursor: pointer;
+    border-radius: 50%;
+}
