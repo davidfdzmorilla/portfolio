@@ -2,20 +2,16 @@ import "./Header.css"
 
 
 export default function Header({ scrollY }) {
-    /* TODO
-        Refactorizar con destructuring las variables de offsetTop
-        Efecto menu :(
-    */
-
-    const colorDefault = 'rgb(197, 188, 188)'
+    const colorDefault = '#808e9b'
+    const colorActive = '#16a085'
     let colorAbout
-    scrollY + 100 >= document.getElementById('about-page')?.offsetTop && scrollY <= (document.getElementById('about-page')?.offsetTop) + (document.getElementById('about-page')?.offsetHeight - 100 ) ? colorAbout = 'green' : colorAbout = colorDefault
+    scrollY + 100 >= document.getElementById('about-page')?.offsetTop && scrollY <= (document.getElementById('about-page')?.offsetTop) + (document.getElementById('about-page')?.offsetHeight - 100) ? colorAbout = colorActive : colorAbout = colorDefault
     let colorSkills
-    scrollY + 100 >= document.getElementById('skills-page')?.offsetTop && scrollY <= (document.getElementById('skills-page')?.offsetTop) + (document.getElementById('skills-page')?.offsetHeight - 100 ) ? colorSkills = 'green' : colorSkills = colorDefault
+    scrollY + 100 >= document.getElementById('skills-page')?.offsetTop && scrollY <= (document.getElementById('skills-page')?.offsetTop) + (document.getElementById('skills-page')?.offsetHeight - 100) ? colorSkills = colorActive : colorSkills = colorDefault
     let colorWorks
-    scrollY + 100 >= document.getElementById('works-page')?.offsetTop && scrollY <= (document.getElementById('works-page')?.offsetTop) + (document.getElementById('works-page')?.offsetHeight - 100 ) ? colorWorks = 'green' : colorWorks = colorDefault
+    scrollY + 100 >= document.getElementById('works-page')?.offsetTop && scrollY <= (document.getElementById('works-page')?.offsetTop) + (document.getElementById('works-page')?.offsetHeight - 100) ? colorWorks = colorActive : colorWorks = colorDefault
     let colorContact
-    scrollY + 100 >= document.getElementById('contact-page')?.offsetTop && scrollY <= (document.getElementById('contact-page')?.offsetTop) + (document.getElementById('contact-page')?.offsetHeight - 100 ) ? colorContact = 'green' : colorContact = colorDefault
+    scrollY + 100 >= document.getElementById('contact-page')?.offsetTop && scrollY <= (document.getElementById('contact-page')?.offsetTop) + (document.getElementById('contact-page')?.offsetHeight - 100) ? colorContact = colorActive : colorContact = colorDefault
     return (
         <header>
             <section>
@@ -28,9 +24,9 @@ export default function Header({ scrollY }) {
             </section>
             <section className='logos-rss-container' >
                 <div className='linkeding-logo' />
-                <div className='gitlab-logo' />
                 <div className='github-logo' />
             </section>
+            <p onClick={() => window.scroll(0, 0)} className="myName">davidfdzmorilla</p>
         </header>
     )
 }

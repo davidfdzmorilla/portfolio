@@ -4,7 +4,7 @@ import "./Landing.css"
 
 export default function Landing({ scrollY }) {
     let classNameForContactButtonPosition
-    scrollY > 161 ? classNameForContactButtonPosition = '-header' : classNameForContactButtonPosition =  '-landing'
+    scrollY > 161 ? classNameForContactButtonPosition = '-header' : classNameForContactButtonPosition = '-landing'
     return (
         <section id='presentation-page'>
             <article className='message-container'>
@@ -17,7 +17,7 @@ export default function Landing({ scrollY }) {
                     }}
                 />
             </article>
-            <p>Junior Front-end developer</p>
+            <p>Front-end developer</p>
             <span className={'contact-button' + classNameForContactButtonPosition} onClick={() => window.scroll(0, document.getElementById('contact-page')?.offsetTop)}>Contáctame!</span>
         </section>
     )

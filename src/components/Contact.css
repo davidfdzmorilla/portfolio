@@ -3,10 +3,12 @@
 #contact-page {
     width: 100%;
     min-height: 100vh;
-    color: rgb(197, 188, 188);
-    padding: 5rem 3rem 0 0;
+    color: #808e9b;
+    padding: 5rem 3rem 3rem 0;
     display: flex;
-    align-items: flex-start;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
     gap: 2rem;
 }
 
@@ -15,13 +17,16 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+    max-width: 600px;
+    width: 50%;
     gap: 2rem;
     animation: animated-form .4s ease-in-out;
 }
 
 
 #contact-page .form-container h2 {
-    font-size: 4rem;
+    font-size: 2rem;
+    display: none;
 }
 
 
@@ -29,9 +34,9 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    width: 100%;
-    height: 70%;
-    gap: 1rem;
+    flex-grow: 1;
+    height: 600px;
+    gap: 2rem;
 }
 
 
@@ -45,14 +50,13 @@
 }
 
 #contact-page .form-container form label input {
-    width: 100%;
     height: 50px;
     border-radius: 5px;
-    background-color: #33353a;
+    background-color: #1e272e;
     border: none;
     padding: 1rem;
     font-size: 1.3rem;
-    color: gray;
+    color: #808e9b;
 }
 
 
@@ -68,21 +72,22 @@
 #contact-page .form-container form label textarea {
     height: 300px;
     border-radius: 5px;
-    background-color: #33353a;
+    background-color: #1e272e;
     border: none;
     padding: 1rem;
     font-size: 1.3rem;
-    color: gray;
+    color: #808e9b;
 }
 
 
-#contact-page .error-text, .error-text-message {
+#contact-page .error-text,
+.error-text-message {
     background-color: #4f5054;
     box-sizing: border-box;
     width: 220px;
     font-size: 1rem;
     position: absolute;
-    color: rgba(255, 0, 0, 0.699);
+    color: #ff5e57;
     margin: 0.5rem 0;
     padding: 1rem;
     border-radius: 10px;
@@ -90,17 +95,16 @@
 }
 
 
-#contact-page  .error-text-message {
+#contact-page .error-text-message {
     margin-top: 24rem;
-    width: 450px;
 }
 
 
 #contact-page .contact-button {
     bottom: 10rem;
-    border: 3px solid rgb(42, 118, 39);
+    border: 1.5px solid #1e272e;
     border-radius: 15px;
-    color: rgb(42, 118, 39);
+    color: #1e272e;
     background-color: transparent;
     width: 150px;
     height: 45px;
@@ -109,19 +113,28 @@
     align-items: center;
     cursor: pointer;
     font-size: 1.2rem;
+    font-weight: bolder;
+}
+
+
+#contact-page .contact-button:hover {
+    background-color: #1e272e;
+    color: #808e9b;
+    border: none;
 }
 
 
 #contact-page .message-ok {
-    color: green;
+    color: #16a085;
     width: 300px;
 }
 
 
 #contact-page .leaflet-container {
-    width: 800px;
-    height: 80%;
+    min-width: 45%;
+    height: 600px;
     animation: animated-form .3s ease-out;
+    z-index: 0;
 }
 
 
@@ -150,5 +163,41 @@
 @keyframes animated-map {
     90% {
         transform: translateX(200px) translateY(100px);
+    }
+}
+
+@media (max-width: 768px) {
+    #contact-page {
+        padding: 2rem 0 8rem;
+    }
+
+    #contact-page .form-container {
+        width: 100%;
+        padding: 0 .5rem;
+        animation: none;
+    }
+
+    #contact-page .form-container h2 {
+        font-size: 1.5rem;
+        display: inline;
+    }
+
+    #contact-page .form-container form label:first-child,
+    #contact-page .form-container form label:nth-child(2) {
+        width: 100%;
+    }
+
+    #contact-page .error-text,
+    .error-text-message {
+        width: 300px;
+        margin-top: 8rem;
+    }
+
+    #contact-page .leaflet-container {
+        display: none;
+    }
+
+    #contact-page .contact-button {
+        width: 100%;
     }
 }

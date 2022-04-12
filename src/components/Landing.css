@@ -1,7 +1,6 @@
 #presentation-page {
     width: 100%;
-    height: 100vh;
-    color: whitesmoke;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
@@ -18,35 +17,29 @@
 
 
 #presentation-page .message-container .Typewriter {
-    min-height: 250px;
-    max-height: 300px;
-}
-
-
-#presentation-page .message-container .Typewriter .Typewriter__cursor, #presentation-page .message-container .Typewriter .Typewriter__wrapper {
-    color: rgb(197, 188, 188);
+    height: 350px;
 }
 
 
 #presentation-page .message-container span {
     font-size: 5rem;
 }
+
 #presentation-page p {
     height: min-content;
     font-size: 1.5rem;
     margin-bottom: 3rem;
-    color: rgb(211, 125, 125);
+    color: #1e272e;
 }
 
 
 
 #presentation-page .contact-button-landing {
-    position: absolute;
     bottom: 10rem;
     text-decoration: none;
-    border: 1px solid rgb(42, 118, 39);
+    border: 1.5px solid #1e272e;
     border-radius: 15px;
-    color: rgb(42, 118, 39);
+    color: #1e272e;
     width: 200px;
     height: 45px;
     display: flex;
@@ -54,14 +47,49 @@
     align-items: center;
     padding: 1rem;
     cursor: pointer;
+    font-weight: bolder;
 }
 
 
 #presentation-page .contact-button-header {
     display: none;
 }
-#presentation-page .contact-button:hover {
-    background-color: red;
-    color: whitesmoke;
+
+#presentation-page .contact-button-landing:hover {
+    background-color: #1e272e;
+    color: #808e9b;
+    border: none;
 }
 
+@media (max-width: 768px) {
+    #presentation-page {
+        height: 600px;
+        margin-bottom: 5rem;
+        justify-content: center;
+        padding-left: .5rem;
+    }
+
+    #presentation-page .message-container {
+        height: 50%;
+        margin: 100px 0 0 0;
+        padding: 0;
+    }
+
+
+    #presentation-page .message-container .Typewriter {
+        height: 200px;
+    }
+
+    #presentation-page .message-container span {
+        font-size: 2.5rem;
+        line-height: 75px;
+    }
+
+    #presentation-page p {
+        font-size: 1.2rem;
+    }
+
+    #presentation-page .contact-button-landing {
+        display: none;
+    }
+}

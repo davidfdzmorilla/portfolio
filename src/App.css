@@ -2,6 +2,15 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: sans-serif;
   scroll-behavior: smooth;
+}
+
+.App {
+  display: flex;
+  font-family: 'Trispace', sans-serif;
+  flex-direction: column;
+}
+
+h2 {
+  color: #1e272e;
 }

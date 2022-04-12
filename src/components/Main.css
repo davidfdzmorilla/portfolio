@@ -1,20 +1,32 @@
 main {
-    margin-left: 300px;
-    background-color: #28292C;
+    margin-left: 200px;
+    background-color: #485460;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
     padding-left: 5rem;
     flex-grow: 1;
+    color: #808e9b;
 }
 
 main .buttons-scroll-conatiner {
     position: fixed;
     bottom: 2rem;
-    left: 20rem;
+    right: 4rem;
     cursor: pointer;
     font-size: 2rem;
     display: flex;
     flex-direction: column;
     gap: 3px;
+    z-index: 1;
+}
+
+@media (max-width: 768px) {
+    main {
+        padding-left: 0;
+        margin-left: 0;
+    }
+
+    main .buttons-scroll-conatiner {
+        display: none;
+    }
 }
