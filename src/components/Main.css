@@ -3,7 +3,7 @@ main {
     background-color: #485460;
     display: flex;
     flex-direction: column;
-    padding-left: 5rem;
+    padding-left: 3rem;
     flex-grow: 1;
     color: #808e9b;
 }
@@ -18,6 +18,11 @@ main .buttons-scroll-conatiner {
     flex-direction: column;
     gap: 3px;
     z-index: 1;
+}
+
+main .up-button {
+    font-size: 3rem;
+    color: #808e9b9e;
 }
 
 @media (max-width: 768px) {

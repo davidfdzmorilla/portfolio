@@ -23,7 +23,6 @@
     align-items: center;
     flex-wrap: wrap;
     gap: 1rem;
-    padding-left: 2rem;
 }
 
 
@@ -32,7 +31,7 @@
     height: 450px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     gap: 2rem;
     border-radius: 10px;
     background-color: #1e272e;
@@ -57,6 +56,7 @@
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
+    min-height: 50px;
 }
 
 #works-page .works-container .work-card .header-card span {
@@ -74,41 +74,12 @@
 }
 
 
-.repo-github {
-    display: flex;
-    background-image: url('../assets/png/github.png');
-    width: 35px;
-    height: 35px;
+.logo {
+    font-size: 2.5rem;
     background-size: cover;
-    background-color: #808e9b;
+    color: #808e9b;
     cursor: pointer;
     border-radius: 50%;
-}
-
-
-.link-logo {
-    display: flex;
-    background-image: url('../assets/png/web.png');
-    width: 35px;
-    height: 35px;
-    background-size: cover;
-    background-color: #808e9b;
-    cursor: pointer;
-    border-radius: 70%;
-    border: 3px solid black;
-}
-
-
-.video-logo {
-    display: flex;
-    background-image: url('../assets/png/video-icon.png');
-    width: 35px;
-    height: 35px;
-    background-size: cover;
-    background-color: #808e9b;
-    cursor: pointer;
-    border-radius: 5px;
-    border: 3px solid black;
 }
 
 
@@ -116,9 +87,6 @@
     font-size: 1.2rem;
     font-weight: bold;
 }
-
-
-
 
 
 #works-page .button-steps-container-projects {
@@ -142,6 +110,10 @@
 
 
 @media (max-width: 768px) {
+    #works-page {
+        padding-right: 0;
+    }
+
     #works-page h2 {
         font-size: 1.5rem;
         display: inline;
@@ -150,6 +122,7 @@
 
     #works-page .works-container .work-card {
         width: 100vw;
+        height: min-content;
         box-shadow: none;
         border: none;
         padding: 2rem 0;

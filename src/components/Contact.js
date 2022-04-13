@@ -68,7 +68,7 @@ export default function Contact({ scrollY }) {
                                     setMessage(e.target.value)
                                     setErrorType('')
                                 }} placeholder="Escribe tu mensaje..." />
-                                {errorType === 'message' && <p className='error-text-message- text-area'>{errorText}</p>}
+                                {errorType === 'message' && <p className='error-text-message'>{errorText}</p>}
                             </label>
                             <p className='message-ok'>{messageOk}</p>
                             <input type='submit' value='Enviar' className='contact-button' />

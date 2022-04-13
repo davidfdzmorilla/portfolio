@@ -1,3 +1,5 @@
+import { SiCss3, SiHtml5, SiJavascript, SiNodedotjs, SiReact } from 'react-icons/si';
+
 import "./Skills.css"
 
 export default function Skills({ scrollY }) {
@@ -11,23 +13,23 @@ export default function Skills({ scrollY }) {
                 {scrollY + 700 > document.getElementById('skills-page')?.offsetTop &&
                     <>
                         <div className="skills__item">
-                            <p>HTML5</p>
+                            <SiHtml5 className='technologies-icon html-icon' />
                             <div className="skills__bar skills__bar--80 blue animate"></div>
                         </div>
                         <div className="skills__item">
-                            <p>CSS3</p>
+                            <SiCss3 className='technologies-icon css-icon' />
                             <div className="skills__bar skills__bar--80 animate red"></div>
                         </div>
                         <div className="skills__item">
-                            <p>JAVASCRIPT</p>
+                            <SiJavascript className='technologies-icon js-icon' />
                             <div className="skills__bar skills__bar--70 orange animate"></div>
                         </div>
                         <div className="skills__item">
-                            <p>NODEJS</p>
+                            <SiNodedotjs className='technologies-icon node-icon' />
                             <div className="skills__bar skills__bar--60 violet animate"></div>
                         </div>
                         <div className="skills__item">
-                            <p>REACT</p>
+                            <SiReact className='technologies-icon react-icon' />
                             <div className="skills__bar skills__bar--70 green animate"></div>
                         </div>
                     </>

@@ -2,6 +2,7 @@
 
 #contact-page {
     width: 100%;
+    max-width: 100vw;
     min-height: 100vh;
     color: #808e9b;
     padding: 5rem 3rem 3rem 0;
@@ -18,7 +19,6 @@
     justify-content: flex-start;
     align-items: flex-start;
     max-width: 600px;
-    width: 50%;
     gap: 2rem;
     padding-bottom: 4rem;
     animation: animated-form .4s ease-in-out;
@@ -37,6 +37,7 @@
     justify-content: space-between;
     flex-grow: 1;
     min-width: 500px;
+    max-width: 100%;
     height: 600px;
     gap: 2rem;
 }
@@ -175,17 +176,28 @@
 
     #contact-page .form-container {
         width: 100%;
-        padding: 0 .5rem;
         animation: none;
     }
 
     #contact-page .form-container h2 {
         font-size: 1.5rem;
         display: inline;
+        padding-left: .5rem;
     }
+
+    #contact-page .form-container label {
+        align-items: flex-end;
+        max-width: 100vw;
+    }
+
 
     #contact-page .form-container form label:first-child,
     #contact-page .form-container form label:nth-child(2) {
+        width: 100%;
+    }
+
+    #contact-page .form-container form label input,
+    #contact-page .form-container form label textarea {
         width: 100%;
     }
 
@@ -200,6 +212,7 @@
     }
 
     #contact-page .contact-button {
-        width: 100%;
+        width: 100vw;
+        border-radius: 0;
     }
 }

@@ -1,3 +1,5 @@
+import { AiFillLinkedin, AiFillGithub } from 'react-icons/ai';
+
 import "./Header.css"
 
 
@@ -23,8 +25,8 @@ export default function Header({ scrollY }) {
                 </ul>
             </section>
             <section className='logos-rss-container' >
-                <div className='linkeding-logo' />
-                <div className='github-logo' />
+                <AiFillLinkedin className='logo' />
+                <AiFillGithub className='logo' />
             </section>
             <p onClick={() => window.scroll(0, 0)} className="myName">davidfdzmorilla</p>
         </header>

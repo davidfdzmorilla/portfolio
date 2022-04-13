@@ -64,28 +64,16 @@ header {
     padding: 0 1rem 2rem 0;
 }
 
-.linkeding-logo {
-    background-image: url('../assets/png/linkedin.png');
-    width: 35px;
-    height: 35px;
-    background-size: cover;
-    cursor: pointer;
-}
-
-.linkeding-logo:hover,
-.github-logo:hover,
+.logo:hover,
 .myName:hover {
     animation: menu-animation .2s ease-in-out forwards;
 }
 
-.github-logo {
-    background-image: url('../assets/png/github.png');
-    width: 35px;
-    height: 35px;
-    background-size: cover;
-    background-color: #808e9b;
+.logo {
+    width: 40px;
+    height: 40px;
+    color: #808e9b;
     cursor: pointer;
-    border-radius: 50%;
 }
 
 

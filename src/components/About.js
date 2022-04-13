@@ -1,3 +1,8 @@
+import { FaBicycle } from 'react-icons/fa';
+import { SiPioneerdj } from 'react-icons/si';
+import { CgPiano } from 'react-icons/cg';
+import { RiSailboatFill } from 'react-icons/ri';
+import { GiSurferVan } from 'react-icons/gi';
 import "./About.css"
 
 
@@ -14,11 +19,11 @@ export default function About() {
             <section className="avatar-container">
                 <div className="face-me" />
                 <article className="hobbies-container">
-                    <div className="tocadiscos-image" />
-                    <div className="synthe-image" />
-                    <div className="timon-image" />
-                    <div className="mtb-image" />
-                    <div className="surf-image" />
+                    <RiSailboatFill color='black' className="icon" />
+                    <FaBicycle color='black' className="icon" />
+                    <SiPioneerdj color='black' className="icon" />
+                    <CgPiano color='black' className="icon" />
+                    <GiSurferVan color='black' className="icon" />
                 </article>
             </section>
         </article>

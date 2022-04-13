@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import { BsFillFileArrowUpFill } from 'react-icons/bs';
 import About from './About'
 import Contact from './Contact'
 import Landing from './Landing'
@@ -23,7 +24,7 @@ export default function Main({ scrollY }) {
                             whileHover={{ scale: 1.1 }}
                             whileTap={{ scale: 0.9 }}
                         >
-                            ⬆️
+                            <BsFillFileArrowUpFill />
                         </motion.span>}
                 </div>
             </section>

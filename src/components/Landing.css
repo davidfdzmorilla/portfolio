@@ -17,12 +17,13 @@
 
 
 #presentation-page .message-container .Typewriter {
-    height: 350px;
+    min-height: 250px;
 }
 
 
 #presentation-page .message-container span {
-    font-size: 5rem;
+    font-size: 4rem;
+    text-overflow: ellipsis;
 }
 
 #presentation-page p {
