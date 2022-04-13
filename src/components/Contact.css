@@ -20,6 +20,7 @@
     max-width: 600px;
     width: 50%;
     gap: 2rem;
+    padding-bottom: 4rem;
     animation: animated-form .4s ease-in-out;
 }
 
@@ -35,6 +36,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     flex-grow: 1;
+    min-width: 500px;
     height: 600px;
     gap: 2rem;
 }
@@ -131,8 +133,8 @@
 
 
 #contact-page .leaflet-container {
-    min-width: 45%;
-    height: 600px;
+    min-width: 500px;
+    height: 550px;
     animation: animated-form .3s ease-out;
     z-index: 0;
 }

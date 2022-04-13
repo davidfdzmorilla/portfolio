@@ -63,10 +63,11 @@
 
 @media (max-width: 768px) {
     #presentation-page {
-        height: 600px;
-        margin-bottom: 5rem;
+        height: 100vh;
+        min-height: 500px;
         justify-content: center;
         padding-left: .5rem;
+        padding-top: 4rem;
     }
 
     #presentation-page .message-container {

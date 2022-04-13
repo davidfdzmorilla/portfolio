@@ -11,6 +11,7 @@ header {
     z-index: 1;
     color: #808e9b;
     padding-bottom: 1rem;
+    overflow: hidden;
 }
 
 
@@ -42,8 +43,15 @@ header {
 
 
 .menu-bar li:hover {
-    background-color: #191d20;
-    padding: 1.3rem 0;
+    animation: menu-animation .2s ease-in-out forwards;
+    background-color: #1b2227;
+}
+
+@keyframes menu-animation {
+    100% {
+        transform: scale(1.05) translateY(.2rem);
+    }
+
 }
 
 
@@ -62,6 +70,12 @@ header {
     height: 35px;
     background-size: cover;
     cursor: pointer;
+}
+
+.linkeding-logo:hover,
+.github-logo:hover,
+.myName:hover {
+    animation: menu-animation .2s ease-in-out forwards;
 }
 
 .github-logo {
