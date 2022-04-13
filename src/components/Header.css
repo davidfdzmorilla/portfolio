@@ -4,14 +4,22 @@ header {
     bottom: 0;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
-    background-color: #1e272e;
+    align-items: center;
+    background-color: #0A0A0A;
     position: fixed;
     z-index: 1;
     color: #808e9b;
     padding-bottom: 1rem;
+    padding-top: 4rem;
     overflow: hidden;
+}
+
+header .code-icon {
+    font-size: 6rem;
+    cursor: pointer;
+    color: #16a085;
 }
 
 
@@ -20,7 +28,6 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-bottom: 25vh;
 }
 
 .menu-bar:first-child {
@@ -44,7 +51,6 @@ header {
 
 .menu-bar li:hover {
     animation: menu-animation .2s ease-in-out forwards;
-    background-color: #1b2227;
 }
 
 @keyframes menu-animation {
@@ -59,9 +65,8 @@ header {
     width: 100%;
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    flex-wrap: wrap;
     gap: 2rem;
-    padding: 0 1rem 2rem 0;
 }
 
 .logo:hover,
@@ -78,10 +83,12 @@ header {
 
 
 header .myName {
+    width: 100%;
     font-size: 1.1rem;
     font-weight: bolder;
     cursor: pointer;
     font-family: 'Trispace', sans-serif;
+    text-align: center;
 }
 
 
@@ -92,10 +99,9 @@ header .myName {
         left: 0;
         top: 0;
         width: 100vw;
-        height: 175px;
+        height: 200px;
+        padding: .5rem;
         justify-content: space-between;
-        gap: 2rem;
-        padding: 0 0 2rem;
         justify-content: space-between;
     }
 
@@ -104,7 +110,7 @@ header .myName {
     }
 
     .logos-rss-container {
-        height: 50px;
         padding: 0;
+        gap: .5rem;
     }
 }

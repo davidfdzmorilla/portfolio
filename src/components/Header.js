@@ -1,4 +1,5 @@
 import { AiFillLinkedin, AiFillGithub } from 'react-icons/ai';
+import { FaCode } from 'react-icons/fa';
 
 import "./Header.css"
 
@@ -16,6 +17,7 @@ export default function Header({ scrollY }) {
     scrollY + 100 >= document.getElementById('contact-page')?.offsetTop && scrollY <= (document.getElementById('contact-page')?.offsetTop) + (document.getElementById('contact-page')?.offsetHeight - 100) ? colorContact = colorActive : colorContact = colorDefault
     return (
         <header>
+            <FaCode onClick={() => window.scroll(0, 0)} className='code-icon' />
             <section>
                 <ul className='menu-bar'>
                     <li style={{ color: colorAbout }} onClick={() => window.scroll(0, document.getElementById('about-page')?.offsetTop)}>Conóceme</li>
@@ -25,10 +27,10 @@ export default function Header({ scrollY }) {
                 </ul>
             </section>
             <section className='logos-rss-container' >
-                <AiFillLinkedin className='logo' />
-                <AiFillGithub className='logo' />
+                <a href='https://www.linkedin.com/in/davidfdzmorilla/' target='_blank' rel="noreferrer nopener"><AiFillLinkedin className='logo' /></a>
+                <a href='https://github.com/davidfdzmorilla' target='_blank' rel="noreferrer nopener"><AiFillGithub className='logo' /></a>
+                <p onClick={() => window.scroll(0, 0)} className="myName">davidfdzmorilla</p>
             </section>
-            <p onClick={() => window.scroll(0, 0)} className="myName">davidfdzmorilla</p>
         </header>
     )
 }

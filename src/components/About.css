@@ -50,9 +50,8 @@
     border: 2.5px double #808e9b;
     padding: 1rem 3rem 3rem;
     border-radius: 15px;
-    background-color: #1e272e;
+    background-color: rgba(0, 0, 0, 0.252);
     box-shadow: 5px 5px 5px black;
-    /* margin-left: 5rem; */
 }
 
 #about-page .hobbies-container {

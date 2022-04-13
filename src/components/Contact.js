@@ -51,7 +51,7 @@ export default function Contact({ scrollY }) {
                                 <input value={name} name='name' onChange={e => {
                                     setName(e.target.value)
                                     setErrorType('')
-                                }} type='text' placeholder="Nombre..." />
+                                }} type='text' placeholder="Escribe aquí..." />
                                 {errorType === 'name' && <p className='error-text'>{errorText}</p>}
                             </label>
                             <label>
@@ -59,7 +59,7 @@ export default function Contact({ scrollY }) {
                                 <input value={email} name='email' onChange={e => {
                                     setEmail(e.target.value)
                                     setErrorType('')
-                                }} type='email' placeholder="Email..." />
+                                }} type='email' placeholder="Escribe aquí..." />
                                 {errorType === 'email' && <p className='error-text'>{errorText}</p>}
                             </label>
                             <label>
@@ -67,7 +67,7 @@ export default function Contact({ scrollY }) {
                                 <textarea value={message} name='message' onChange={e => {
                                     setMessage(e.target.value)
                                     setErrorType('')
-                                }} placeholder="Escribe tu mensaje..." />
+                                }} placeholder="Escribe aquí..." />
                                 {errorType === 'message' && <p className='error-text-message'>{errorText}</p>}
                             </label>
                             <p className='message-ok'>{messageOk}</p>

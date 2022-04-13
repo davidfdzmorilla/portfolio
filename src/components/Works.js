@@ -9,7 +9,7 @@ const projectsList = [
         description: 'App de búsqueda y reserva de alojamientos con sistema de puntuación y notficaciones. Desarrollada con MERN stack.',
         urlImage: 'inquilino-perfecto.jpeg',
         urlRepo: 'https://github.com/davidfdzmorilla/inquilino-perfecto',
-        link: '',
+        link: 'https://inquilinoperfecto.davidfdzmorilla.dev/',
         urlVideo: 'https://www.loom.com/share/8a7e5133f758463a9be4c1ad41e1c2fd'
     },
     {
