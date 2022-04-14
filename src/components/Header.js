@@ -1,10 +1,14 @@
 import { AiFillLinkedin, AiFillGithub } from 'react-icons/ai';
 import { FaCode } from 'react-icons/fa';
+import Navbar from './NavBar';
 
 import "./Header.css"
+import { useState } from 'react';
 
 
 export default function Header({ scrollY }) {
+    const [sidebar, setSidebar] = useState(false)
+
     const colorDefault = '#808e9b'
     const colorActive = '#16a085'
     let colorAbout
@@ -29,8 +33,12 @@ export default function Header({ scrollY }) {
             <section className='logos-rss-container' >
                 <a href='https://www.linkedin.com/in/davidfdzmorilla/' target='_blank' rel="noreferrer nopener"><AiFillLinkedin className='logo' /></a>
                 <a href='https://github.com/davidfdzmorilla' target='_blank' rel="noreferrer nopener"><AiFillGithub className='logo' /></a>
-                <p onClick={() => window.scroll(0, 0)} className="myName">davidfdzmorilla</p>
+                <p onClick={() => {
+                    window.scroll(0, 0)
+                    setSidebar(false)
+                }} className="myName">davidfdzmorilla</p>
             </section>
+            <Navbar sidebar={sidebar} setSidebar={setSidebar} />
         </header>
     )
 }
