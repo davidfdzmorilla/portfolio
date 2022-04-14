@@ -212,8 +212,9 @@
 
 @media (max-width: 768px) {
     #skills-page {
-        padding: 0 0 3rem 0;
+        padding: 160px 0 3rem 0;
         gap: 2rem;
+        justify-content: flex-start;
     }
 
     #skills-page h2 {

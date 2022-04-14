@@ -99,10 +99,14 @@ header .myName {
         left: 0;
         top: 0;
         width: 100vw;
-        height: 200px;
-        padding: .5rem;
+        height: 150px;
+        padding: 1rem;
         justify-content: space-between;
         justify-content: space-between;
+    }
+
+    header .code-icon {
+        display: none;
     }
 
     .menu-bar {

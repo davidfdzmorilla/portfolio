@@ -170,7 +170,7 @@
 
 @media (max-width: 768px) {
     #contact-page {
-        padding: 2rem 0 8rem;
+        padding: 150px 0 4rem 0;
     }
 
     #contact-page .form-container {

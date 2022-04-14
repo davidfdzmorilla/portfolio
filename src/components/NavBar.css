@@ -1,0 +1,95 @@
+.navbar-container {
+    display: none;
+}
+
+
+@media (max-width: 768px) {
+    .navbar-container {
+        display: inline;
+    }
+
+    .navbar {
+        height: 80px;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+    }
+
+    .navbar .burger-icon {
+        font-size: 3rem;
+        cursor: pointer;
+    }
+
+    .nav-menu {
+        min-width: 100vw;
+        max-width: 600px;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        position: fixed;
+        top: 150px;
+        right: -100%;
+        transition: 850ms;
+    }
+
+    .nav-menu.active {
+        right: 0;
+        transition: 350ms;
+        background-color: #0A0A0A;
+    }
+
+    .nav-text {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        padding: 8px 0px 8px 16px;
+        list-style: none;
+        height: 60px;
+    }
+
+    .nav-text a {
+        text-decoration: none;
+    }
+
+    .nav-text a:hover {
+        text-decoration: underline;
+    }
+
+    .nav-menu-items {
+        width: 100%;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 2rem;
+        font-size: 2rem;
+        font-weight: bolder;
+        padding: 2rem 1rem;
+    }
+
+    .nav-menu-items li {
+        cursor: pointer;
+    }
+
+    .navbar-toggle {
+        list-style: none;
+        text-align: right;
+        margin-right: 3rem;
+
+    }
+
+    .navbar-toggle span {
+        width: 100vw;
+        display: flex;
+        justify-content: flex-end;
+
+    }
+
+    .navbar .close-icon {
+        font-size: 3rem;
+        color: #808e9b;
+        cursor: pointer;
+        margin-bottom: 1rem;
+    }
+}
