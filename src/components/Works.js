@@ -38,7 +38,7 @@ export default function Works() {
             <section className="works-container">
                 {projectsList?.map(project => {
                     return (
-                        <article id={project.urlVideo} className="work-card">
+                        <article key={Math.random()} id={project.urlVideo} className="work-card">
                             <div className="header-card">
                                 <span>{project.title}</span>
                                 <div className="links-container">

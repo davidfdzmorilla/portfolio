@@ -39,7 +39,7 @@ export default function Skills({ scrollY }) {
                 <article className="soft-skills">
                     <h3>Soft skills</h3>
                     {softSkills?.map(item => {
-                        return <div className="soft-sklls-contain"><span></span><p>{item}</p></div>
+                        return <div key={Math.random()} className="soft-sklls-contain"><span></span><p>{item}</p></div>
                     })}
                 </article>
             </section>
