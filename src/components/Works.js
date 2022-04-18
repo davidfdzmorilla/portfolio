@@ -6,7 +6,7 @@ import "./Works.css"
 const projectsList = [
     {
         title: 'INQUILINO PERFECTO',
-        description: 'App de búsqueda y reserva de alojamientos con sistema de puntuación y notficaciones. Desarrollada con MERN stack.',
+        description: 'App de búsqueda y reserva de alojamientos con sistema de puntuación y notificaciones. Desarrollada con MERN stack.',
         urlImage: 'inquilino-perfecto.jpeg',
         urlRepo: 'https://github.com/davidfdzmorilla/inquilino-perfecto',
         link: 'https://inquilinoperfecto.davidfdzmorilla.dev/',
@@ -14,7 +14,7 @@ const projectsList = [
     },
     {
         title: 'NASA APP',
-        description: 'App de visualización de contenido multiedia usando la API res de nasa.org. Desarrollada con REACTJS.',
+        description: 'App de visualización de contenido multiedia usando la API pública nasa.org. Desarrollada con REACTJS.',
         urlImage: 'nasa-app.jpeg',
         urlRepo: 'https://github.com/davidfdzmorilla/nasa-api-res',
         link: 'https://nasaapp.davidfdzmorilla.dev/',
