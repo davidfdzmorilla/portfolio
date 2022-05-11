@@ -17,7 +17,7 @@ export default function Landing({ scrollY }) {
                     }}
                 />
             </article>
-            <p>Front-end developer</p>
+            <p>Full-stack Web Developer</p>
             <span className={'contact-button' + classNameForContactButtonPosition} onClick={() => window.scroll(0, document.getElementById('contact-page')?.offsetTop)}>Contáctame!</span>
         </section>
     )
