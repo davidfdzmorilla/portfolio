@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { GiHamburgerMenu } from 'react-icons/gi'
 import { FaRegWindowClose } from 'react-icons/fa'
 

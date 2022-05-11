@@ -22,14 +22,14 @@ export default function Header({ scrollY }) {
     return (
         <header>
             <FaCode onClick={() => window.scroll(0, 0)} className='code-icon' />
-            <section>
+            <menu>
                 <ul className='menu-bar'>
                     <li style={{ color: colorAbout }} onClick={() => window.scroll(0, document.getElementById('about-page')?.offsetTop)}>Conóceme</li>
                     <li style={{ color: colorSkills }} onClick={() => window.scroll(0, document.getElementById('skills-page')?.offsetTop)}>Mis skills</li>
                     <li style={{ color: colorWorks }} onClick={() => window.scroll(0, document.getElementById('works-page')?.offsetTop)}>Proyectos</li>
                     {scrollY > 161 && <li style={{ color: colorContact }} onClick={() => window.scroll(0, document.getElementById('contact-page')?.offsetTop)}>Contáctame</li>}
                 </ul>
-            </section>
+            </menu>
             <section className='logos-rss-container' >
                 <a href='https://www.linkedin.com/in/davidfdzmorilla/' target='_blank' rel="noreferrer nopener"><AiFillLinkedin className='logo' /></a>
                 <a href='https://github.com/davidfdzmorilla' target='_blank' rel="noreferrer nopener"><AiFillGithub className='logo' /></a>

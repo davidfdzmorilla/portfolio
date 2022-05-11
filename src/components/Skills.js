@@ -3,7 +3,7 @@ import { SiCss3, SiHtml5, SiJavascript, SiNodedotjs, SiReact } from 'react-icons
 import "./Skills.css"
 
 export default function Skills({ scrollY }) {
-    const softSkills = ['Flexibilidad', 'Trabajo en equipo', 'Responasbilidad', 'Actitud positiva', 'Gestión del tiempo', 'Empatía', 'Motivación', 'Resilencia']
+    const softSkills = ['Flexibilidad', 'Trabajo en equipo', 'Responsabilidad', 'Actitud positiva', 'Gestión del tiempo', 'Empatía', 'Motivación', 'Resilencia']
 
     return (
         <article id='skills-page'>
