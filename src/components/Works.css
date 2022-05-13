@@ -41,7 +41,7 @@
 
 
 #works-page .works-container .work-card:hover {
-    animation: card-animation .3s .1s ease-in-out forwards;
+    animation: card-animation .5s .1s ease-in-out forwards;
 }
 
 @keyframes card-animation {
