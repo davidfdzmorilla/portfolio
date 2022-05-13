@@ -7,6 +7,7 @@ import Skills from './Skills'
 import Works from './Works'
 
 import './Main.css'
+import { CvComponent } from './CvComponent';
 
 export default function Main({ scrollY }) {
     const handleClickScrollUp = () => {
@@ -15,6 +16,7 @@ export default function Main({ scrollY }) {
 
     return (
         <main id='main'>
+            <CvComponent />
             <section>
                 <div className='buttons-scroll-conatiner'>
                     {scrollY > 80 &&

@@ -1,0 +1,108 @@
+.cv-container {
+  position: fixed;
+  right: 2rem;
+  top: 2rem;
+  background-color: #808e9b;
+  padding: 0.5rem 1rem;
+  border-radius: 15px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  z-index: 5;
+  box-shadow: 5px 5px 15px #181818;
+  animation: bounce 1s 10s ease-in-out;
+  animation: show 10s ease-in-out;
+}
+
+@keyframes show {
+  0% {
+    transform: translateY(-200px);
+  }
+
+  90% {
+    transform: translateY(-100px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-500px);
+    opacity: 0;
+  }
+
+  5% {
+    transform: translateY(-500px);
+    opacity: 0;
+  }
+
+  15% {
+    transform: translateY(0);
+    padding-bottom: 5px;
+  }
+
+  30% {
+    transform: translateY(-50%);
+  }
+
+  40% {
+    transform: translateY(0%);
+    padding-bottom: 6px;
+  }
+
+  50% {
+    transform: translateY(-30%);
+  }
+
+  70% {
+    transform: translateY(0%);
+    padding-bottom: 7px;
+  }
+
+  80% {
+    transform: translateY(-15%);
+  }
+
+  90% {
+    transform: translateY(0%);
+    padding-bottom: 8px;
+  }
+
+  95% {
+    transform: translateY(-7%);
+  }
+
+  97% {
+    transform: translateY(0%);
+    padding-bottom: 9px;
+  }
+
+  99% {
+    transform: translateY(-3%);
+  }
+
+  100% {
+    transform: translateY(0);
+    padding-bottom: 9px;
+    opacity: 1;
+  }
+}
+
+.cv-container:hover {
+  background-color: #16a085;
+  cursor: pointer;
+  transition: all 300ms;
+}
+
+.cv-container a {
+  text-decoration: none;
+  color: #181818;
+}
+
+@media (max-width: 768px) {
+  .cv-container {
+    display: none;
+  }
+}
