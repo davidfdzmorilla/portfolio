@@ -1,6 +1,6 @@
 main {
     margin-left: 200px;
-    background-color: #1e272e;
+    background-color: var(--first-color);
     display: flex;
     flex-direction: column;
     padding-left: 3rem;
