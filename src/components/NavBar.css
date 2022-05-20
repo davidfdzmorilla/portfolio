@@ -35,7 +35,7 @@
     .nav-menu.active {
         right: 0;
         transition: 350ms;
-        background-color: #0A0A0A;
+        background-color: var(--second-color);
     }
 
     .nav-text {

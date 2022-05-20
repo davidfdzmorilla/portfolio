@@ -5,7 +5,7 @@
 #skills-page {
     width: 100%;
     min-height: 100vh;
-    color: rgb(197, 188, 188);
+    color: var(--text-color);
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -45,7 +45,7 @@
     height: 600px;
     padding: 2rem 0 0 2rem;
     border-radius: 15px;
-    background-color: rgba(0, 0, 0, 0.252);
+    background-color: var(--second-color);
     color: #808e9b;
     box-shadow: 5px 5px 5px black;
     gap: 1rem;
@@ -77,7 +77,7 @@
 #skills-page .soft-skills .soft-sklls-contain span {
     width: 1rem;
     height: 1rem;
-    background-color: #0be881;
+    background-color: var(--green-color);
     border-radius: 50%;
 }
 
@@ -94,7 +94,7 @@
     gap: 3rem;
     padding: 2rem 1rem 3rem 3rem;
     border-radius: 15px;
-    background-color: rgba(0, 0, 0, 0.252);
+    background-color: var(--second-color);
     color: #808e9b;
     box-shadow: 5px 5px 5px black;
 
@@ -118,7 +118,7 @@
 
 .skills__item .technologies-icon {
     font-size: 2.5rem;
-    color: #808e9b;
+    color: var(--text-color);
 }
 
 

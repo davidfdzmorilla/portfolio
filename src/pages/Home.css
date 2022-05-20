@@ -1,3 +1,17 @@
+:root {
+    /* Dark-mode */
+    --first-color: #1e272e;
+    --second-color: #181818;
+    --letter-color: #808e9b;
+    --green-color: #16a085;
+    --error-color: #ff5e57;
+    /* Light-mode */
+    --light-first-color: #d3dee6;
+    --light-second-color: #d74444;
+    --light-letter-color: #161717;
+
+}
+
 .home-page {
     display: flex;
     justify-content: space-between;
