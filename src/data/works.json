@@ -30,5 +30,13 @@
     "urlRepo": "https://github.com/davidfdzmorilla/portfolio",
     "link": " ",
     "urlVideo": " "
+  },
+  {
+    "title": "MAGIC NUMBER",
+    "description": "App Desarrollada con React.",
+    "urlImage": "magic-number.jpeg",
+    "urlRepo": "https://github.com/davidfdzmorilla/magic-number",
+    "link": "https://magicnumber.davidfdzmorilla.dev/",
+    "urlVideo": " "
   }
 ]
