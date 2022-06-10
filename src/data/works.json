@@ -1,7 +1,7 @@
 [
   {
     "title": "INQUILINO PERFECTO",
-    "description": "App de búsqueda y reserva de alojamientos con sistema de puntuación y notificaciones. Desarrollada con MERN stack.",
+    "description": "App de búsqueda y reserva de alojamientos con sistema de puntuación y notificaciones. Desarrollada en MERN stack.",
     "urlImage": "inquilino-perfecto.jpeg",
     "urlRepo": "https://github.com/davidfdzmorilla/inquilino-perfecto",
     "link": " ",
@@ -37,6 +37,14 @@
     "urlImage": "magic-number.jpeg",
     "urlRepo": "https://github.com/davidfdzmorilla/magic-number",
     "link": "https://magicnumber.davidfdzmorilla.dev/",
+    "urlVideo": " "
+  },
+  {
+    "title": "NUWE PROFILE",
+    "description": "Aplicación desarrollada para challlenge de nuwe.io de clon perfil de usuario. Desarrollada en MERN stack",
+    "urlImage": "nuwe-profile.jpeg",
+    "urlRepo": "https://github.com/davidfdzmorilla/nuwe-basic-profile",
+    "link": "https://nuweprofile.davidfdzmorilla.dev/",
     "urlVideo": " "
   }
 ]
