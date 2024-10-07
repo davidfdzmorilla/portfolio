@@ -28,7 +28,7 @@ jobs:
 
       # 5. Comprobar la variable
       - name: Mostrar los primeros 10 caracteres de la clave SSH
-        run: echo "${{ secrets.SSH_PRIVATE_KEY }}" | head -c 10
+        run: echo "${{ secrets.SSH_PRIVATE_KEY }}" | head -c 20
 
 
       # 6. Desplegar en el servidor usando Docker Compose
