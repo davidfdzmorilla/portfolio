@@ -2,12 +2,12 @@ services:
   react-app:
     build: .
     ports:
-      - "3000:80"  # Puedes cambiar el puerto si lo necesitas
+      - "3000:80"
     networks:
       - traefik_proxy
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.react-app.rule=Host(`davidfdzmorilla.dev`)" # Ajusta con tu dominio
+      - "traefik.http.routers.react-app.rule=Host(`davidfdzmorilla.dev`)"
       - "traefik.http.routers.react-app.entrypoints=websecure"
       - "traefik.http.routers.react-app.tls.certresolver=myresolver"
     volumes:
