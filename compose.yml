@@ -1,5 +1,5 @@
 services:
-  react-app:
+  portfolio-app:
     build: .
     ports:
       - "3000:80"
@@ -7,9 +7,9 @@ services:
       - traefik_proxy
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.react-app.rule=Host(`davidfdzmorilla.dev`)"
-      - "traefik.http.routers.react-app.entrypoints=websecure"
-      - "traefik.http.routers.react-app.tls.certresolver=myresolver"
+      - "traefik.http.routers.portfolio-app.rule=Host(`davidfdzmorilla.dev`)"
+      - "traefik.http.routers.portfolio-app.entrypoints=websecure"
+      - "traefik.http.routers.portfolio-app.tls.certresolver=myresolver"
     volumes:
       - .:/app
       - /app/node_modules
