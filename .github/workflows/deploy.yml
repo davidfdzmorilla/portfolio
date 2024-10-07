@@ -26,12 +26,7 @@ jobs:
       - name: Empujar la imagen a Docker Hub
         run: docker push ${{ secrets.DOCKER_USERNAME }}/portfolio-app:latest
 
-      # 5. Comprobar la variable
-      - name: Mostrar los primeros 10 caracteres de la clave SSH
-        run: echo "${{ secrets.SSH_PRIVATE_KEY }}" | head -c 20
-
-
-      # 6. Desplegar en el servidor usando Docker Compose
+      # 5. Desplegar en el servidor usando Docker Compose
       - name: Desplegar en el servidor
         uses: appleboy/ssh-action@v0.1.2
         with:
@@ -41,6 +36,6 @@ jobs:
           port: 22
           script: |
             cd /home/david/compose/portfolio
-            docker-compose pull
-            docker-compose up -d --build
+            docker compose pull
+            docker compose up -d --build
           debug: true
