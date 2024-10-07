@@ -1,4 +1,4 @@
-import { SiCss3, SiHtml5, SiJavascript, SiNodedotjs, SiReact } from 'react-icons/si';
+import { SiCss3, SiHtml5, SiJavascript, SiNodedotjs, SiReact, SiPhp, SiPython } from 'react-icons/si';
 
 import "./Skills.css"
 
@@ -31,6 +31,14 @@ export default function Skills({ scrollY }) {
                         <div className="skills__item">
                             <SiReact className='technologies-icon react-icon' />
                             <div className="skills__bar skills__bar--70 green animate"></div>
+                        </div>
+                        <div className="skills__item">
+                            <SiPhp className='technologies-icon php-icon' />
+                            <div className="skills__bar skills__bar--60 php-color  animate"></div>
+                        </div>
+                        <div className="skills__item">
+                            <SiPython className='technologies-icon python-icon' />
+                            <div className="skills__bar skills__bar--70 python-color animate"></div>
                         </div>
                     </>
                 }

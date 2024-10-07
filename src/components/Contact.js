@@ -28,7 +28,7 @@ export default function Contact({ scrollY }) {
             return
         }
 
-        await emailjs.sendForm('portfolio', 'template_0jq002w', form.current, 'vTQJR18fU3CVGyHNh')
+        await emailjs.sendForm('portfolio', 'template_0jq002w', form.current, 'yTir4Hcs_OQjD6dzi')
             .then((result) => {
                 setMessageOk('Mensaje enviado. Gracias por contactar, en breve recibirás respuesta.')
                 setEmail('')

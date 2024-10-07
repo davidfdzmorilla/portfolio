@@ -12,10 +12,7 @@ export default function About() {
         <article id='about-page'>
             <article className='content'>
                 <h2>Este soy yo</h2>
-                <p>Me llamo David y con 42 años busco mi primer empleo como desarrollador 💻.
-                    Después de una carrera de casi 20 años en el sector marítimo 🚢, decidí prepararme para ser desarrollador, algo que siempre me fascinó 😲.
-                    Me encanta JavaScript y todo lo relacinado con la parte Frontend del desarrollo de aplicaciones web, donde sigo formándome y especializándome.
-                    Me considero una persona a la que le gusta trabajar en equipo 🦾 y comprometida a seguir aprendiendo 📚 para poder resolver proyectos cada vez más complejos.</p>
+                <p>Soy un desarrollador full stack con habilidades en HTML, CSS, JavaScript, Node.js, MySQL, PHP, Python, Docker, Nginx y Traefik. Mi experiencia en el desarrollo web me permite abordar proyectos de manera eficiente y asegurar la escalabilidad, disponibilidad y seguridad de las aplicaciones en entornos de producción. Busco constantemente mejorar mis habilidades y estar actualizado en las últimas tendencias y tecnologías. Soy dedicado y apasionado con un enfoque en la calidad y la atención al detalle en cada proyecto que entrego. Estoy comprometido a entregar soluciones de alta calidad y ampliar mis conocimientos.</p>
             </article>
             <section className="avatar-container">
                 <div className="face-me" />

@@ -97,6 +97,7 @@
     background-color: var(--second-color);
     color: #808e9b;
     box-shadow: 5px 5px 5px black;
+    overflow: scroll;
 
 }
 
@@ -161,6 +162,13 @@
     background-color: #00d8d6;
 }
 
+.php-color::after {
+    background-color: #ffde57;
+}
+
+.python-color::after {
+    background-color: #777BB3;
+}
 
 .skills__bar--10::after {
     --skill-bar-lenght: 10%;
