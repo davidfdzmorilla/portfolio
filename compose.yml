@@ -1,6 +1,6 @@
 services:
   portfolio-app:
-    build: .
+    image: davidfdzmorilla/portfolio-app:latest
     ports:
       - "3000:80"
     networks:
@@ -10,11 +10,7 @@ services:
       - "traefik.http.routers.portfolio-app.rule=Host(`davidfdzmorilla.dev`)"
       - "traefik.http.routers.portfolio-app.entrypoints=websecure"
       - "traefik.http.routers.portfolio-app.tls.certresolver=myresolver"
-    volumes:
-      - .:/app
-      - /app/node_modules
 
 networks:
   traefik_proxy:
     external: true
-

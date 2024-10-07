@@ -3,23 +3,30 @@ name: Deploy React App
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
-  deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
-      # 1. Clonar el repositorio 
+      # 1. Clonar el repositorio
       - name: Clonar el repositorio
         uses: actions/checkout@v2
 
-      # 2. Construir la imagen Docker
-      - name: Construir la imagen de Docker
-        run: |
-          docker build -t portfolio-app .
+      # 2. Loguearse en Docker Hub
+      - name: Loguearse en Docker Hub
+        run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
 
-      # 3. Desplegar en el servidor
+      # 3. Construir la imagen Docker
+      - name: Construir la imagen de Docker
+        run: docker build -t ${{ secrets.DOCKER_USERNAME }}/portfolio-app:latest .
+
+      # 4. Empujar la imagen a Docker Hub
+      - name: Empujar la imagen a Docker Hub
+        run: docker push ${{ secrets.DOCKER_USERNAME }}/portfolio-app:latest
+
+      # 5. Desplegar en el servidor usando Docker Compose
       - name: Desplegar en el servidor
         uses: appleboy/ssh-action@v0.1.2
         with:
@@ -28,12 +35,6 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: 22
           script: |
-            docker stop portfolio-app || true
-            docker rm portfolio-app || true
-            docker pull tu-repo/portfolio-app:latest
-            docker run -d -p 80:80 --name portfolio-app tu-repo/portfolio-app:latest
-
-      # 4. Limpiar imágenes locales
-      - name: Limpiar imágenes locales
-        run: |
-          docker system prune -af
+            cd /home/david/compose/portfolio
+            docker-compose pull
+            docker-compose up -d --build
