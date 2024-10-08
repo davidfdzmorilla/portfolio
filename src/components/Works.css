@@ -1,168 +1,107 @@
+/* Estilos generales */
 #works-page {
     width: 100%;
-    min-height: 100vh;
+    /* min-height: 100vh; */
     color: var(--letter-color);
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    gap: 2rem;
-    padding: 2rem 2rem 2rem 0;
+    gap: 2rem; /* Reducir la separación entre el slider y el siguiente componente */
+    padding: 2rem;
 }
 
 #works-page h2 {
-    padding-left: 1rem;
     font-size: 2rem;
+    display: none; /* Mostrar si es necesario */
+}
+
+/* Swiper */
+.swiper {
     width: 100%;
-    display: none;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
-#works-page .works-container {
+.swiper-slide {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-    row-gap: 1rem;
+    transition: transform 0.5s ease-in-out; /* Añadir transición para un movimiento más suave */
 }
 
-
-#works-page .works-container .work-card {
-    width: 500px;
-    height: 500px;
+/* Tarjeta de proyecto */
+.work-card {
+    width: 90%;
+    max-width: 700px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    gap: 1rem;
-    border-radius: 10px;
+    gap: 2rem; /* Aumentar la separación entre los elementos de la tarjeta */
+    border-radius: 15px;
     background-color: var(--second-color);
-    box-shadow: 5px 5px 5px var(--second-color);
-    padding: 1.5rem 1.5rem 3rem;
+    box-shadow: 8px 8px 15px var(--second-color);
+    padding: 2rem;
+    transition: transform 0.3s ease-in-out; /* Añadir transición para animación suave al hacer hover */
 }
 
-
-#works-page .works-container .work-card:hover {
-    animation: card-animation .5s .1s ease-in-out forwards;
-}
-
-@keyframes card-animation {
-    100% {
-        transform: scale(1.2) translateY(-2rem) translateX(-2rem);
-        background-color: rgba(0, 0, 0, 0.678);
-    }
-
-}
-
-
-#works-page .works-container .work-card .header-card {
+.header-card {
     display: flex;
-    align-items: flex-start;
-    min-height: 80px;
-    padding: 0 1rem;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
 }
 
-#works-page .works-container .work-card .header-card span {
+.header-card span {
     font-weight: bolder;
-    width: 100vw;
+    font-size: 2.5rem;
     text-align: center;
-    font-size: 2rem;
 }
-
 
 .links-container {
-    width: 200px;
-    height: 40px;
     display: flex;
     justify-content: center;
-    gap: 1rem;
+    gap: 1.5rem;
 }
-
 
 .logo {
     font-size: 2rem;
-    background-size: cover;
-    cursor: pointer;
-    border-radius: 50%;
-}
-
-
-#works-page .works-container .work-card span {
-    font-size: 1.2rem;
-    font-weight: bold;
-}
-
-
-#works-page .button-steps-container-projects {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-self: center;
-    font-size: 1.5rem;
-    gap: .5rem;
-}
-
-
-.button-steps-container-projects span:first-child {
     cursor: pointer;
 }
 
-
-#works-page .button-steps-container-projects span:last-child {
-    cursor: pointer;
+.work-card img {
+    width: 100%;
+    border-radius: 15px;
 }
 
+.work-card p {
+    text-align: center;
+    padding: 0 1.5rem;
+}
 
+/* Estilo de los puntos de paginación */
+.swiper-pagination-bullet {
+    width: 16px;
+    height: 16px;
+    background: var(--letter-color);
+    opacity: 0.8;
+}
+
+.swiper-pagination-bullet-active {
+    background: var(--primary-color);
+    opacity: 1;
+}
+
+/* Responsividad */
 @media (max-width: 768px) {
-    #works-page {
-        padding: 150px 0 0 0;
-        justify-content: flex-start;
+    .work-card {
+        width: 90%;
+        padding: 1rem;
+    }
+
+    .header-card span {
+        font-size: 1.5rem;
     }
 
     #works-page h2 {
-        font-size: 1.5rem;
-        display: inline;
-        padding-left: .5rem;
+        display: block;
     }
-
-    #works-page .works-container .work-card {
-        width: 100vw;
-        height: min-content;
-        box-shadow: none;
-        border: none;
-        padding: 2rem 0;
-        border-radius: 0;
-    }
-
-    #works-page .works-container .work-card:hover {
-        animation: none;
-    }
-
-    .links-container {
-        justify-content: center;
-    }
-
-    #works-page .works-container .work-card span,
-    #works-page .works-container .work-card p {
-        padding: .5rem;
-    }
-
-    #works-page .works-container .work-card:hover {
-        transform: none;
-    }
-
-    #works-page .works-container .work-card .header-card {
-        padding: 0 1rem;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 1rem;
-    }
-
-    #works-page .works-container .work-card .header-card span {
-        width: 100vw;
-        text-align: center;
-        font-size: 2rem;
-    }
-
 }
