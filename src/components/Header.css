@@ -9,7 +9,7 @@ header {
     align-items: center;
     background-color: var(--second-color);
     position: fixed;
-    z-index: 1;
+    z-index: 9;
     color: var(--letter-color);
     padding-bottom: 1rem;
     padding-top: 4rem;
