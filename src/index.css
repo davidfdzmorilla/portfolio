@@ -1,13 +1,154 @@
+/* Estilos base futuristas para toda la aplicación */
+:root {
+  /* Paleta de colores futurista */
+  --primary-color: #16a085;
+  --primary-color-rgb: 22, 160, 133;
+  --secondary-color: #1e272e;
+  --dark-bg: #0a0a0c;
+  --light-accent: #2de2a6;
+  --light-accent-rgb: 45, 226, 166;
+  --dark-accent: #106159;
+  --text-color: #e0e0e0;
+  --text-secondary: rgba(224, 224, 224, 0.7);
+  
+  /* Variables existentes - mantener compatibilidad */
+  --first-color: var(--secondary-color);
+  --second-color: var(--dark-bg);
+  --letter-color: var(--text-color);
+  --green-color: var(--primary-color);
+  --error-color: #ff5e57;
+  
+  /* Efectos comunes */
+  --glass-bg: rgba(15, 15, 20, 0.7);
+  --glass-border: 1px solid rgba(255, 255, 255, 0.1);
+  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+  --card-border-radius: 15px;
+  --hover-transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  --glow-shadow: 0 0 20px rgba(var(--primary-color-rgb), 0.5);
+}
+
+/* Resetear estilos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos base del body */
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: 'Trispace', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--dark-bg);
+  color: var(--text-color);
+  overflow-x: hidden;
+  background: linear-gradient(135deg, var(--dark-bg) 0%, #0d1117 100%);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/* Estilos de texto futuristas */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+  background: linear-gradient(90deg, var(--primary-color), #fff, var(--primary-color));
+  background-size: 200% auto;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: shine 3s linear infinite;
+}
+
+/* Estilos para enlaces */
+a {
+  color: var(--light-accent);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--primary-color);
+}
+
+/* Animaciones reutilizables */
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+}
+
+@keyframes glowing {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Clase para glassmorphism */
+.glass-panel {
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  border: var(--glass-border);
+  box-shadow: var(--glass-shadow);
+  border-radius: var(--card-border-radius);
+}
+
+/* Clase para botón futurista */
+.futuristic-button {
+  padding: 0.8rem 1.5rem;
+  background: linear-gradient(45deg, var(--primary-color), var(--light-accent));
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: var(--hover-transition);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(var(--primary-color-rgb), 0.4);
+}
+
+.futuristic-button:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 25px rgba(var(--primary-color-rgb), 0.6);
+}
+
+.futuristic-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  transition: 0.5s;
+}
+
+.futuristic-button:hover::before {
+  left: 100%;
 }

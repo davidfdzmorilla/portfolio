@@ -1,11 +1,45 @@
 main {
     margin-left: 200px;
-    background-color: var(--first-color);
+    background: linear-gradient(135deg, rgba(10, 10, 12, 0.9) 0%, rgba(13, 17, 23, 0.8) 100%);
     display: flex;
     flex-direction: column;
     padding-left: 3rem;
     flex-grow: 1;
-    color: #808e9b;
+    color: var(--text-color);
+    position: relative;
+    overflow: hidden;
+}
+
+main::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: url('/public/circuit-pattern.png');
+    opacity: 0.1;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Efectos de partículas flotantes */
+main::after {
+    content: '';
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: radial-gradient(circle at 20% 30%, rgba(var(--primary-color-rgb), 0.15) 0%, transparent 20%),
+                radial-gradient(circle at 70% 60%, rgba(var(--light-accent-rgb), 0.1) 0%, transparent 20%);
+    z-index: 0;
+    pointer-events: none;
+}
+
+main > * {
+    position: relative;
+    z-index: 1;
 }
 
 main .buttons-scroll-conatiner {
@@ -17,12 +51,29 @@ main .buttons-scroll-conatiner {
     display: flex;
     flex-direction: column;
     gap: 3px;
-    z-index: 1;
+    z-index: 10;
 }
 
 main .up-button {
     font-size: 3rem;
-    color: #808e9b9e;
+    color: var(--primary-color);
+    background: var(--glass-bg);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--glow-shadow);
+    transition: var(--hover-transition);
+    border: var(--glass-border);
+    animation: float 3s ease-in-out infinite;
+}
+
+main .up-button:hover {
+    transform: scale(1.1) translateY(-5px);
+    box-shadow: 0 0 25px rgba(var(--primary-color-rgb), 0.8);
+    color: var(--light-accent);
 }
 
 @media (max-width: 768px) {
@@ -32,6 +83,13 @@ main .up-button {
     }
 
     main .buttons-scroll-conatiner {
-        display: none;
+        bottom: 1rem;
+        right: 1rem;
+    }
+    
+    main .up-button {
+        width: 50px;
+        height: 50px;
+        font-size: 2rem;
     }
 }

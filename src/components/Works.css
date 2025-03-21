@@ -1,107 +1,198 @@
-/* Estilos generales */
+/* Variables para la galería futurista */
+:root {
+    --primary-color: #16a085;
+    --primary-color-rgb: 22, 160, 133;
+}
+
+/* Estilos para la galería futurista de proyectos */
 #works-page {
     width: 100%;
-    /* min-height: 100vh; */
     color: var(--letter-color);
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2rem; /* Reducir la separación entre el slider y el siguiente componente */
-    padding: 2rem;
+    padding: 4rem 2rem;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6));
 }
 
 #works-page h2 {
-    font-size: 2rem;
-    display: none; /* Mostrar si es necesario */
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    background: linear-gradient(90deg, var(--primary-color), #fff, var(--primary-color));
+    background-size: 200% auto;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: shine 3s linear infinite;
 }
 
-/* Swiper */
-.swiper {
+@keyframes shine {
+    to {
+        background-position: 200% center;
+    }
+}
+
+/* Contenedor principal de la galería */
+.projects-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
     width: 100%;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    max-width: 1400px;
 }
 
-.swiper-slide {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: transform 0.5s ease-in-out; /* Añadir transición para un movimiento más suave */
-}
-
-/* Tarjeta de proyecto */
-.work-card {
-    width: 90%;
-    max-width: 700px;
+/* Tarjeta de proyecto futurista */
+.project-card {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    background: rgba(25, 25, 35, 0.6);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 20px rgba(var(--primary-color-rgb), 0.3);
+    transition: all 0.4s ease;
     display: flex;
     flex-direction: column;
-    gap: 2rem; /* Aumentar la separación entre los elementos de la tarjeta */
-    border-radius: 15px;
-    background-color: var(--second-color);
-    box-shadow: 8px 8px 15px var(--second-color);
-    padding: 2rem;
-    transition: transform 0.3s ease-in-out; /* Añadir transición para animación suave al hacer hover */
+    height: 450px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.header-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
+.project-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 0 30px rgba(var(--primary-color-rgb), 0.5);
 }
 
-.header-card span {
-    font-weight: bolder;
-    font-size: 2.5rem;
-    text-align: center;
+.project-card::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    z-index: -1;
+    background: linear-gradient(45deg, 
+        var(--primary-color), 
+        transparent, 
+        transparent, 
+        var(--primary-color));
+    background-size: 400%;
+    border-radius: 16px;
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity 0.5s;
 }
 
-.links-container {
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-}
-
-.logo {
-    font-size: 2rem;
-    cursor: pointer;
-}
-
-.work-card img {
-    width: 100%;
-    border-radius: 15px;
-}
-
-.work-card p {
-    text-align: center;
-    padding: 0 1.5rem;
-}
-
-/* Estilo de los puntos de paginación */
-.swiper-pagination-bullet {
-    width: 16px;
-    height: 16px;
-    background: var(--letter-color);
-    opacity: 0.8;
-}
-
-.swiper-pagination-bullet-active {
-    background: var(--primary-color);
+.project-card:hover::before {
     opacity: 1;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+.project-image {
+    height: 200px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.project-card:hover .project-image img {
+    transform: scale(1.1);
+}
+
+.project-content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    position: relative;
+}
+
+.project-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+    position: relative;
+}
+
+.project-description {
+    flex-grow: 1;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.5;
+}
+
+.project-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: auto;
+}
+
+.project-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.project-link:hover {
+    background: var(--primary-color);
+    color: var(--second-color);
+    transform: translateY(-3px);
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.project-tag {
+    background: rgba(var(--primary-color-rgb), 0.2);
+    color: var(--primary-color);
+    padding: 0.3rem 0.6rem;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 /* Responsividad */
 @media (max-width: 768px) {
-    .work-card {
-        width: 90%;
-        padding: 1rem;
+    .projects-gallery {
+        grid-template-columns: 1fr;
     }
-
-    .header-card span {
-        font-size: 1.5rem;
+    
+    #works-page {
+        padding: 2rem 1rem;
     }
-
+    
     #works-page h2 {
-        display: block;
+        font-size: 2rem;
+    }
+    
+    .project-card {
+        height: auto;
+        min-height: 400px;
     }
 }

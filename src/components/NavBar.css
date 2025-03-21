@@ -1,95 +1,131 @@
 .navbar-container {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
     display: none;
 }
 
+.navbar {
+    width: 100%;
+    height: 80px;
+    background: var(--glass-bg);
+    backdrop-filter: blur(15px);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom: var(--glass-border);
+    box-shadow: var(--glass-shadow);
+}
+
+.burger-icon, .close-icon {
+    width: 35px;
+    height: 35px;
+    margin-left: 2rem;
+    color: var(--primary-color);
+    filter: drop-shadow(0 0 8px rgba(var(--primary-color-rgb), 0.5));
+    transition: all 0.3s ease;
+}
+
+.burger-icon:hover, .close-icon:hover {
+    color: var(--light-accent);
+    transform: rotate(90deg);
+    cursor: pointer;
+}
+
+.nav-menu {
+    background: var(--glass-bg);
+    backdrop-filter: blur(15px);
+    width: 280px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    transition: 850ms;
+    z-index: 10;
+    border-right: var(--glass-border);
+    box-shadow: var(--glass-shadow);
+}
+
+.nav-menu.active {
+    left: 0;
+    transition: 350ms;
+}
+
+.nav-menu-items {
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+}
+
+.nav-menu-items li {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1.2rem 0 1.2rem 2rem;
+    margin: 0.5rem 1rem;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-color);
+    overflow: hidden;
+}
+
+.nav-menu-items li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 5px;
+    height: 100%;
+    background: var(--primary-color);
+    transform: scaleY(0);
+    transition: transform 0.3s ease;
+    transform-origin: bottom;
+}
+
+.nav-menu-items li:hover {
+    background: rgba(var(--primary-color-rgb), 0.1);
+    transform: translateX(10px);
+    color: var(--primary-color);
+}
+
+.nav-menu-items li:hover::before {
+    transform: scaleY(1);
+}
 
 @media (max-width: 768px) {
     .navbar-container {
-        display: inline;
+        display: block;
     }
-
+    
     .navbar {
-        height: 80px;
         display: flex;
-        justify-content: flex-start;
-        align-items: center;
     }
-
-    .navbar .burger-icon {
-        font-size: 3rem;
-        cursor: pointer;
-    }
-
+    
     .nav-menu {
-        min-width: 100vw;
-        max-width: 600px;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        position: fixed;
-        top: 150px;
-        right: -100%;
-        transition: 850ms;
-    }
-
-    .nav-menu.active {
-        right: 0;
-        transition: 350ms;
-        background-color: var(--second-color);
-    }
-
-    .nav-text {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        padding: 8px 0px 8px 16px;
-        list-style: none;
-        height: 60px;
-    }
-
-    .nav-text a {
-        text-decoration: none;
-    }
-
-    .nav-text a:hover {
-        text-decoration: underline;
-    }
-
-    .nav-menu-items {
         width: 100%;
-        list-style: none;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        gap: 2rem;
-        font-size: 2rem;
-        font-weight: bolder;
-        padding: 2rem 1rem;
     }
-
+    
     .nav-menu-items li {
-        cursor: pointer;
+        text-align: center;
+        justify-content: center;
+        padding-left: 0;
     }
-
-    .navbar-toggle {
-        list-style: none;
-        text-align: right;
-        margin-right: 3rem;
-
+    
+    .nav-menu-items li:hover {
+        transform: translateX(0);
     }
-
-    .navbar-toggle span {
-        width: 100vw;
-        display: flex;
-        justify-content: flex-end;
-
-    }
-
-    .navbar .close-icon {
-        font-size: 3rem;
-        color: #808e9b;
-        cursor: pointer;
-        margin-bottom: 1rem;
+    
+    .nav-menu-items li::before {
+        display: none;
     }
 }

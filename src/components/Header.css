@@ -6,37 +6,72 @@ header {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    align-items: center;
-    background-color: var(--second-color);
+    background: var(--glass-bg);
+    backdrop-filter: blur(15px);
     position: fixed;
     z-index: 9;
-    color: var(--letter-color);
+    color: var(--text-color);
     padding-bottom: 1rem;
     padding-top: 4rem;
     overflow: hidden;
+    border-right: var(--glass-border);
+    box-shadow: var(--glass-shadow);
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, 
+        transparent, 
+        var(--primary-color), 
+        transparent);
+    opacity: 0.7;
+}
+
+header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    background: linear-gradient(to top, 
+        rgba(var(--primary-color-rgb), 0.05), 
+        transparent);
+    z-index: -1;
 }
 
 header .code-icon {
     font-size: 6rem;
     cursor: pointer;
-    color: var(--green-color);
+    color: var(--primary-color);
+    filter: drop-shadow(0 0 8px rgba(var(--primary-color-rgb), 0.8));
+    transition: var(--hover-transition);
 }
 
+header .code-icon:hover {
+    transform: scale(1.05) rotate(-5deg);
+    color: var(--light-accent);
+}
 
 .menu-bar {
     width: 200px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    margin-top: 2rem;
 }
 
 .menu-bar:first-child {
     border-top: 1px solid #485460;
 }
 
-
 .menu-bar li {
-    border-bottom: 1px solid #485460;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -46,20 +81,32 @@ header .code-icon {
     text-decoration: none;
     font-family: 'Trispace', sans-serif;
     font-weight: bold;
+    transition: var(--hover-transition);
+    position: relative;
+    overflow: hidden;
 }
 
+.menu-bar li::before {
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 100%;
+    background: var(--primary-color);
+    left: 0;
+    top: 0;
+    transform: translateX(-5px);
+    transition: transform 0.3s ease;
+}
+
+.menu-bar li:hover::before {
+    transform: translateX(0);
+}
 
 .menu-bar li:hover {
-    animation: menu-animation .2s ease-in-out forwards;
+    color: var(--primary-color);
+    background: rgba(var(--primary-color-rgb), 0.1);
+    padding-left: 10px;
 }
-
-@keyframes menu-animation {
-    100% {
-        transform: scale(1.05) translateY(.2rem);
-    }
-
-}
-
 
 .logos-rss-container {
     width: 100%;
@@ -67,31 +114,49 @@ header .code-icon {
     justify-content: center;
     flex-wrap: wrap;
     gap: 2rem;
-}
-
-.logo:hover,
-.myName:hover {
-    animation: menu-animation .2s ease-in-out forwards;
+    margin-top: 2rem;
 }
 
 .logo {
     width: 40px;
     height: 40px;
-    color: var(--letter-color);
+    color: var(--text-color);
     cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+.logo:hover {
+    color: var(--primary-color);
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(var(--primary-color-rgb), 0.4);
+}
 
 header .myName {
     width: 100%;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     font-weight: bolder;
     cursor: pointer;
     font-family: 'Trispace', sans-serif;
     text-align: center;
+    letter-spacing: 1px;
+    margin-top: 1rem;
+    background: linear-gradient(90deg, var(--primary-color), var(--light-accent));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    transition: var(--hover-transition);
 }
 
-
+header .myName:hover {
+    transform: scale(1.05);
+    letter-spacing: 1.5px;
+}
 
 @media (max-width: 768px) {
     header {

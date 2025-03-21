@@ -2,81 +2,76 @@ import { AiFillGithub, AiOutlineLink, AiOutlineVideoCamera } from 'react-icons/a
 import projectsList from '../data/works.json';
 import './Works.css';
 
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/effect-coverflow';
-import 'swiper/css/pagination';
-
-import { EffectCoverflow, Pagination, Autoplay } from 'swiper/modules';
-
 export default function Works() {
     return (
         <article id='works-page'>
             <h2>Proyectos</h2>
-            <Swiper
-                effect={'coverflow'}
-                grabCursor={true}
-                centeredSlides={true}
-                slidesPerView={window.innerWidth < 768 ? 1 : 2}
-                spaceBetween={20} // Mostrar más de una tarjeta en pantallas más grandes
-                coverflowEffect={{
-                    rotate: 30,
-                    stretch: 10,
-                    depth: 200,
-                    modifier: 1,
-                    slideShadows: false,
-                }}
-                pagination={{ clickable: true }}
-                autoplay={{
-                    delay: 3000,
-                    disableOnInteraction: false,
-                }}
-                speed={1000}
-                modules={[EffectCoverflow, Pagination, Autoplay]}
-                className="mySwiper"
-            >
-                {projectsList?.map(project => (
-                    <SwiperSlide key={project.title}>
-                        <article id={project.urlVideo} className="work-card">
-                            <div className="header-card">
-                                <span>{project.title}</span>
-                                <div className="links-container">
+            
+            <div className="projects-gallery">
+                {projectsList?.map((project, index) => (
+                    <div className="project-card" key={project.title}>
+                        <div className="project-image">
+                            <img src={project.urlImage} alt={project.title} />
+                        </div>
+                        
+                        <div className="project-content">
+                            <h3 className="project-title">{project.title}</h3>
+                            
+                            <div className="project-tags">
+                                {/* Extraer tecnologías de la descripción */}
+                                {project.description.includes("MERN") && (
+                                    <span className="project-tag">MERN Stack</span>
+                                )}
+                                {project.description.includes("React") && (
+                                    <span className="project-tag">React</span>
+                                )}
+                                {project.description.toLowerCase().includes("api") && (
+                                    <span className="project-tag">API</span>
+                                )}
+                                <span className="project-tag">Web</span>
+                            </div>
+                            
+                            <p className="project-description">{project.description}</p>
+                            
+                            <div className="project-links">
+                                <a
+                                    href={project.urlRepo}
+                                    target='_blank'
+                                    rel="noreferrer noopener"
+                                    className="project-link"
+                                    aria-label="GitHub Repository"
+                                >
+                                    <AiFillGithub />
+                                </a>
+                                
+                                {project.link && project.link.trim() !== " " && (
                                     <a
-                                        href={project.urlRepo}
+                                        href={project.link}
                                         target='_blank'
                                         rel="noreferrer noopener"
-                                        className="logo"
+                                        className="project-link"
+                                        aria-label="Live Demo"
                                     >
-                                        <AiFillGithub />
+                                        <AiOutlineLink />
                                     </a>
-                                    {project.link && (
-                                        <a
-                                            href={project.link}
-                                            target='_blank'
-                                            rel="noreferrer noopener"
-                                            className="logo"
-                                        >
-                                            <AiOutlineLink />
-                                        </a>
-                                    )}
-                                    {project.urlVideo && (
-                                        <a
-                                            href={project.urlVideo}
-                                            target='_blank'
-                                            rel="noreferrer noopener"
-                                            className="logo"
-                                        >
-                                            <AiOutlineVideoCamera />
-                                        </a>
-                                    )}
-                                </div>
+                                )}
+                                
+                                {project.urlVideo && project.urlVideo.trim() !== " " && (
+                                    <a
+                                        href={project.urlVideo}
+                                        target='_blank'
+                                        rel="noreferrer noopener"
+                                        className="project-link"
+                                        aria-label="Video Demo"
+                                    >
+                                        <AiOutlineVideoCamera />
+                                    </a>
+                                )}
                             </div>
-                            <img src={project.urlImage} alt='project' />
-                            <p>{project.description}</p>
-                        </article>
-                    </SwiperSlide>
+                        </div>
+                    </div>
                 ))}
-            </Swiper>
+            </div>
         </article>
     );
 }
