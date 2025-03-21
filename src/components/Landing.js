@@ -12,12 +12,12 @@ export default function Landing({ scrollY }) {
                     onInit={(typewriter) => {
                         typewriter
                             .pauseFor(1000)
-                            .typeString('Hola!<br/>Soy <span>David</span>,<br/>desarrollador web.')
+                            .typeString('Hola!<br/>Soy <span>David</span>,<br/>DevOps Engineer.')
                             .start();
                     }}
                 />
             </article>
-            <p>Full-stack Web Developer</p>
+            <p>DevOps & Cloud Infrastructure Specialist</p>
             <button 
                 className={buttonClassName} 
                 onClick={() => window.scroll(0, document.getElementById('contact-page')?.offsetTop)}
