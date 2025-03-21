@@ -5,7 +5,7 @@ import { validateData } from '../utils/validateData'
 
 import "./Contact.css"
 
-const position = [42.4336, -8.64805]
+const position = [42.231358, -8.712447]
 
 
 export default function Contact({ scrollY }) {
@@ -74,10 +74,10 @@ export default function Contact({ scrollY }) {
                             <input type='submit' value='Enviar' className='contact-button' />
                         </form>
                     </section>
-                    <MapContainer center={position} zoom={10}>
+                    <MapContainer center={position} zoom={10} className="map-dark">
                         <TileLayer
                             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                            url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
                         />
                         <Marker position={position}>
                             <Popup>

@@ -16,7 +16,7 @@ export default function Main({ scrollY }) {
 
     return (
         <main id='main'>
-            <CvComponent />
+            {/*<CvComponent />*/}
             <section>
                 <div className='buttons-scroll-conatiner'>
                     {scrollY > 80 &&

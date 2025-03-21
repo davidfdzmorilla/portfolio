@@ -1,15 +1,68 @@
 import { AiFillGithub, AiOutlineLink, AiOutlineVideoCamera } from 'react-icons/ai';
+import { motion } from 'framer-motion';
 import projectsList from '../data/works.json';
 import './Works.css';
 
 export default function Works() {
+    // Variantes para animación del contenedor
+    const containerVariants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.2,
+                delayChildren: 0.3
+            }
+        }
+    };
+
+    // Variantes para animación de cada proyecto
+    const projectVariants = {
+        hidden: { 
+            opacity: 0, 
+            y: 50,
+            scale: 0.9 
+        },
+        visible: { 
+            opacity: 1, 
+            y: 0,
+            scale: 1,
+            transition: { 
+                type: "spring",
+                stiffness: 100,
+                damping: 12
+            }
+        }
+    };
+
     return (
         <article id='works-page'>
-            <h2>Proyectos</h2>
+            <motion.h2
+                initial={{ opacity: 0, y: -20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.7 }}
+            >
+                Proyectos
+            </motion.h2>
             
-            <div className="projects-gallery">
+            <motion.div 
+                className="projects-gallery"
+                variants={containerVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.1 }}
+            >
                 {projectsList?.map((project, index) => (
-                    <div className="project-card" key={project.title}>
+                    <motion.div 
+                        className="project-card" 
+                        key={project.title}
+                        variants={projectVariants}
+                        whileHover={{ 
+                            scale: 1.05,
+                            transition: { duration: 0.3 }
+                        }}
+                    >
                         <div className="project-image">
                             <img src={project.urlImage} alt={project.title} />
                         </div>
@@ -69,9 +122,9 @@ export default function Works() {
                                 )}
                             </div>
                         </div>
-                    </div>
+                    </motion.div>
                 ))}
-            </div>
+            </motion.div>
         </article>
     );
 }
