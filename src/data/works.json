@@ -16,6 +16,30 @@
     "urlVideo": " "
   },
   {
+    "title": "SEQUENZER APP",
+    "description": "App de creación de secuencias musicales. Desarrollada con Vanilla JS.",
+    "urlImage": "sequenzer-app.png",
+    "urlRepo": "https://github.com/davidfdzmorilla/",
+    "link": "https://sequencer.davidfdzmorilla.dev/",
+    "urlVideo": " "
+  },
+  {
+    "title": "Dj App",
+    "description": "Portfolio de Dj con reproductor de música y formulario de contacto. Desarrollada con Vanilla JS.",
+    "urlImage": "dj-app.png",
+    "urlRepo": "https://github.com/davidfdzmorilla/",
+    "link": "https://dj.davidfdzmorilla.dev/",
+    "urlVideo": " "
+  },
+  {
+    "title": "Planificador de propositos",
+    "description": "App de planificación de propósitos de año nuevo. Desarrollada con Vanilla JS.",
+    "urlImage": "planificador-app.png",
+    "urlRepo": "https://github.com/davidfdzmorilla/",
+    "link": "https://planificador.davidfdzmorilla.dev/",
+    "urlVideo": " "
+  },
+  {
     "title": "TODO LIST",
     "description": "App Desarrollada con React y utilizando local-storage para guardar datos.",
     "urlImage": "todolist.jpeg",
