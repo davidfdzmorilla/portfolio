@@ -51,7 +51,7 @@ main .buttons-scroll-conatiner {
     display: flex;
     flex-direction: column;
     gap: 3px;
-    z-index: 10;
+    z-index: 999999999;
 }
 
 main .up-button {
@@ -68,6 +68,7 @@ main .up-button {
     transition: var(--hover-transition);
     border: var(--glass-border);
     animation: float 3s ease-in-out infinite;
+    z-index: 99999;
 }
 
 main .up-button:hover {
@@ -80,6 +81,7 @@ main .up-button:hover {
     main {
         padding-left: 0;
         margin-left: 0;
+        margin-top: 4rem
     }
 
     main .buttons-scroll-conatiner {
