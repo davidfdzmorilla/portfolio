@@ -39,3 +39,12 @@ jobs:
             docker compose pull
             docker compose up -d --build
           debug: true
+       # NUEVO: Actualizar K8s
+      - name: Desplegar en Kubernetes
+        uses: appleboy/ssh-action@v0.1.2
+        with:
+          host: ${{ secrets.K8S_SERVER_IP }}
+          username: root
+          key: ${{ secrets.K8S_SSH_PRIVATE_KEY }}
+          script: |
+            kubectl rollout restart deployment portfolio -n laboratorio
