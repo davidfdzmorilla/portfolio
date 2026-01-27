@@ -12,7 +12,7 @@ export default function Landing({ scrollY }) {
                     onInit={(typewriter) => {
                         typewriter
                             .pauseFor(1000)
-                            .typeString('Hola desde K8s!<br/>Soy <span>David</span>,<br/>DevOps Engineer.')
+                            .typeString('Hola!<br/>Soy <span>David</span>,<br/>DevOps Engineer.')
                             .start();
                     }}
                 />
